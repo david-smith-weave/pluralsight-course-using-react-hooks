@@ -1,14 +1,14 @@
 import React from "react";
-import ImageToggleOnMouseOver from "../src/ImageToggleOnMouseOver";
+import ImageToggleOnMouseOver from "../src/ImageToggleOnScroll";
 
 const ImageChangeOnScroll = () => {
     return (
         <div>
-            <ImageToggleOnMouseOver 
+            <ImageToggleOnScroll 
                 primaryImg="/static/speakers/bw/Speaker-187.jpg" 
                 secondaryImg="/static/speakers/Speaker-187.jpg" 
                 alt="" />
-            <ImageToggleOnMouseOver 
+            <ImageToggleOnScroll 
                 primaryImg="/static/speakers/bw/Speaker-1124.jpg" 
                 secondaryImg="/static/speakers/Speaker-1124.jpg"
                 alt="" />
