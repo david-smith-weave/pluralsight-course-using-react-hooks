@@ -16,4 +16,4 @@ const ImageToggleOnScroll = ({ primaryImg, secondaryImg }) => {
     );
 };
 
-export default ImageTogglerOnMouseOver;
+export default ImageToggleOnScroll;
