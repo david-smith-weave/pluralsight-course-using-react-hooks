@@ -6,7 +6,8 @@ const InputElement = () => {
 
     return <input 
     onChange={(e) => {}}
-    placeholder="Enter some text"/>;
+    placeholder="Enter some text"
+    value={inputText}/>;
 }
 
 export default InputElement;
