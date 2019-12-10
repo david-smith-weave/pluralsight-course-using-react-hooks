@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from "react";
 
-const ImageToggleOnMouseOver = ({ primaryImg, secondaryImg }) => {
+const ImageToggleOnScroll = ({ primaryImg, secondaryImg }) => {
 
     const imageRef = useRef(null);
 
@@ -30,10 +30,10 @@ const ImageToggleOnMouseOver = ({ primaryImg, secondaryImg }) => {
 
     return(
         <img 
-            src={primaryImg}
+            src={inView ? secondaryImg : primaryImg}
             alt="" ref={imageRef}
         />
     );
 };
 
-export default ImageToggleOnMouseOver;
+export default ImageToggleOnScroll;
