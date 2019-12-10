@@ -13,6 +13,12 @@ const InputElement = () => {
     placeholder="Enter some text"
     value={inputText}/><br />
     {inputText}
+    <hr/><br/>
+    <ul>
+        {historyList.map((rec)=> {
+            return <div>{rec}</div>
+        })}
+    </ul>
     </div>;
 }
 
