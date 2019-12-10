@@ -7,7 +7,7 @@ const ImageTogglerOnMouseOver = ({ primaryImg, secondaryImg }) => {
     return(
         <img onMouseOver={() => {}} onMouseOut={() => {}}
             src={primaryImg}
-            alt=""
+            alt="" ref={imageRef}
         />
     );
 };
