@@ -5,7 +5,9 @@ const InputElement = () => {
     const [inputText, setInputText] = useState("");
 
     return <input 
-    onChange={(e) => {}}
+    onChange={(e) => {
+        setInputText(e.target.value)
+    }}
     placeholder="Enter some text"
     value={inputText}/>;
 }
