@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useState} from "react";
 
 const ImageToggleOnMouseOver = ({ primaryImg, secondaryImg }) => {
 
@@ -10,6 +10,8 @@ const ImageToggleOnMouseOver = ({ primaryImg, secondaryImg }) => {
             window.removeEventListener("scroll", scrollHandler);
         });
     });
+
+    const [inView, setInView] = useState(false);
 
     return(
         <img 
