@@ -6,6 +6,7 @@ const ImageToggleOnScroll = ({ primaryImg, secondaryImg }) => {
 
     useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
+        setInView(isInView());
         return ( () => {
             window.removeEventListener("scroll", scrollHandler);
         });
