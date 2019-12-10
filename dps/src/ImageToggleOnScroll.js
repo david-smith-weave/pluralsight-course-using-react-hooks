@@ -22,6 +22,12 @@ const ImageToggleOnMouseOver = ({ primaryImg, secondaryImg }) => {
         return false; 
     };
 
+    const scrollHandler = () => {
+        setInView(() => {
+            return isInView();
+        })
+    };
+
     return(
         <img 
             src={primaryImg}
