@@ -15,32 +15,32 @@ const Speakers = ({}) => {
 
   //const [speakerList, setSpeakerList] = useState([]);
   
-  const [speakerList, dispatch] = useReducer(speakersReducer, []);
-  const [isLoading, setIsLoading] = useState(true);
+  //const [speakerList, dispatch] = useReducer(speakersReducer, []);
+  //const [isLoading, setIsLoading] = useState(true);
 
   const context = useContext(ConfigContext);
 
-  useEffect(() => {
-    setIsLoading(true);
-    new Promise(function(resolve) {
-      setTimeout(function() {
-        resolve();
-      }, 1000);
-    }).then(() => {
-      setIsLoading(false);
-      const speakerListServerFilter = SpeakerData.filter(({ sat, sun }) => {
-        return (speakingSaturday && sat) || (speakingSunday && sun);
-      });
-      //setSpeakerList(speakerListServerFilter);
-      dispatch({
-        type: "setSpeakerList",
-        data: speakerListServerFilter
-      });
-    });
-    return () => {
-      console.log("cleanup");
-    };
-  }, []); // [speakingSunday, speakingSaturday]);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   new Promise(function(resolve) {
+  //     setTimeout(function() {
+  //       resolve();
+  //     }, 1000);
+  //   }).then(() => {
+  //     setIsLoading(false);
+  //     const speakerListServerFilter = SpeakerData.filter(({ sat, sun }) => {
+  //       return (speakingSaturday && sat) || (speakingSunday && sun);
+  //     });
+  //     //setSpeakerList(speakerListServerFilter);
+  //     dispatch({
+  //       type: "setSpeakerList",
+  //       data: speakerListServerFilter
+  //     });
+  //   });
+  //   return () => {
+  //     console.log("cleanup");
+  //   };
+  // }, []); // [speakingSunday, speakingSaturday]);
 
   const handleChangeSaturday = () => {
     setSpeakingSaturday(!speakingSaturday);
