@@ -74,6 +74,13 @@ const Speakers = ({}) => {
     ? []
     : newSpeakerList;
 
+    if(hasErrored)
+      return (
+        <div>
+          {errorMessage}&nbsp;"Make sure you have launched "npm run json-server"
+        </div>
+      );
+
   const handleChangeSunday = () => {
     setSpeakingSunday(!speakingSunday);
   };
