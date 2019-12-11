@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./Home";
 import Speakers from "./Speakers";
 
-export const ConfigContent = React.createContext();
+export const ConfigContext = React.createContext();
 
 const pageToShow = pageName => {
   if (pageName === "Home") return <Home />;
