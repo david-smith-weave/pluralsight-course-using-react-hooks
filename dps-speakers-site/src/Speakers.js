@@ -8,8 +8,18 @@ import SpeakerData from "./SpeakerData";
 import SpeakerDetail from "./SpeakerDetail";
 import { ConfigContext } from "./App";
 import speakersReducer from "./speakersReducer";
+import useAxiosFetch from './useAxiosFetch';
 
 const Speakers = ({}) => {
+
+  const{
+    data,
+    isLoading,
+    hasErrored,
+    errorMessage,
+    updateDataRecord
+  } = useAxiosFetch("http://localhost:4000/speakers", []);
+
   const [speakingSaturday, setSpeakingSaturday] = useState(true);
   const [speakingSunday, setSpeakingSunday] = useState(true);
 
