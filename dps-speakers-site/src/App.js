@@ -13,7 +13,7 @@ const pageToShow = pageName => {
 const configValue = {
   showSignMeUp: true,
   showSpeakerSpeakingDays: true,
-  loggedInUserEmail: 'david.smith@weaveability.com'
+  loggedInUserEmail: ''
 };
 
 const App = ({ pageName }) => {
