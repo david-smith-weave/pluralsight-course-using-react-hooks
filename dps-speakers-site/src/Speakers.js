@@ -56,7 +56,7 @@ const Speakers = ({}) => {
     setSpeakingSaturday(!speakingSaturday);
   };
 
-  const newSpeakerList = useMemo(() => speakerList
+  const newSpeakerList = useMemo(() => data
     .filter(
       ({ sat, sun }) => (speakingSaturday && sat) || (speakingSunday && sun)
     )
@@ -68,7 +68,7 @@ const Speakers = ({}) => {
         return 1;
       }
       return 0;
-    }), [speakingSaturday, speakingSunday, speakerList]);
+    }), [speakingSaturday, speakingSunday, data]);
 
   const speakerListFiltered = isLoading
     ? []
