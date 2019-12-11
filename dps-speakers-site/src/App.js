@@ -12,11 +12,11 @@ const pageToShow = pageName => {
 
 const configValue = {
   showSignMeUp: true,
-  showSpeakerSpeakingDays: true,
-  loggedInUserEmail: ''
+  showSpeakerSpeakingDays: true
 };
 
-const App = ({ pageName }) => {
+const App = ({ pageName, userInfo }) => {
+  configValue.loggedInUserEmail = userInfo ? userInfo.email : '';
   return (
     <ConfigContext.Provider value={configValue}>
       <div>{pageToShow(pageName)}</div>
