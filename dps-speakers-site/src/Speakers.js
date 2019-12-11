@@ -98,12 +98,12 @@ const Speakers = ({}) => {
         console.log(error);
       });
 
-    const sessionId = parseInt(e.target.attributes["data-sessionid"].value);
+    // const sessionId = parseInt(e.target.attributes["data-sessionid"].value);
 
-    dispatch({
-      type: favoriteValue === true ? "favorite" : "unfavorite",
-      sessionId
-    });
+    // dispatch({
+    //   type: favoriteValue === true ? "favorite" : "unfavorite",
+    //   sessionId
+    // });
 
     // setSpeakerList(speakerList.map(item => {
     //   if (item.id === sessionId) {
