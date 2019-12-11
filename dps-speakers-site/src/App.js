@@ -11,7 +11,11 @@ const pageToShow = pageName => {
 };
 
 const App = ({ pageName }) => {
-  return <div>{pageToShow(pageName)}</div>;
+  return (
+    <ConfigContext.Provider>
+      <div>{pageToShow(pageName)}</div>
+    </ConfigContext.Provider>
+  )
 };
 
 export default App;
