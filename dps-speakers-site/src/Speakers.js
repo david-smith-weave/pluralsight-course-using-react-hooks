@@ -80,6 +80,7 @@ const Speakers = ({}) => {
       <Menu />
       <div className="container">
         <div className="btn-toolbar  margintopbottom5 checkbox-bigger">
+          {context.showSpeakerSpeakingDays === false ? null : (
           <div className="hide">
             <div className="form-check-inline">
               <label className="form-check-label">
@@ -104,6 +105,7 @@ const Speakers = ({}) => {
               </label>
             </div>
           </div>
+          )}
         </div>
         <div className="row">
           <div className="card-deck">
