@@ -7,6 +7,7 @@ export const ConfigContext = React.createContext();
 const pageToShow = pageName => {
   if (pageName === "Home") return <Home />;
   if (pageName === "Speakers") return <Speakers />;
+  if (pageName === "Login") return <Login />;
   return <div>Not Found</div>;
 };
 
