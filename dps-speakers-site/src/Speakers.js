@@ -9,6 +9,7 @@ import SpeakerDetail from "./SpeakerDetail";
 import { ConfigContext } from "./App";
 import speakersReducer from "./speakersReducer";
 import useAxiosFetch from './useAxiosFetch';
+import Axios from "axios";
 
 const Speakers = ({}) => {
 
@@ -85,8 +86,18 @@ const Speakers = ({}) => {
     setSpeakingSunday(!speakingSunday);
   };
 
-  const heartFavoriteHandler = useCallback((e, favoriteValue) => {
+  const heartFavoriteHandler = useCallback((e, speakerRec) => {
     e.preventDefault();
+    const toggledRec = { ...speakerRec, favorite: !speakerRec.favorite };
+
+    Axios.put(`http://localhost:4000/speakers/${speakerRec.id}`, toggledRec)
+      .then(function(response) {
+        updateDataRecord(toggledRec);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
     const sessionId = parseInt(e.target.attributes["data-sessionid"].value);
 
     dispatch({
