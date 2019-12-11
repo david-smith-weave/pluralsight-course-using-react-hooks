@@ -10,9 +10,13 @@ const pageToShow = pageName => {
   return <div>Not Found</div>;
 };
 
+const configValue = {
+  showSpeakerSpeakingDays: true
+};
+
 const App = ({ pageName }) => {
   return (
-    <ConfigContext.Provider>
+    <ConfigContext.Provider value={configValue}>
       <div>{pageToShow(pageName)}</div>
     </ConfigContext.Provider>
   )
