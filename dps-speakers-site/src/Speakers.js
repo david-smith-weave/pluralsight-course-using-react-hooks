@@ -22,7 +22,7 @@ const Speakers = ({}) => {
         return state;
     }
   }
-  const [speakerList, setSpeakerList] = useReducer(speakersReducer, []);
+  const [speakerList, dispatch] = useReducer(speakersReducer, []);
   const [isLoading, setIsLoading] = useState(true);
 
   const context = useContext(ConfigContext);
@@ -38,7 +38,11 @@ const Speakers = ({}) => {
       const speakerListServerFilter = SpeakerData.filter(({ sat, sun }) => {
         return (speakingSaturday && sat) || (speakingSunday && sun);
       });
-      setSpeakerList(speakerListServerFilter);
+      //setSpeakerList(speakerListServerFilter);
+      dispatch({
+        type: "setSpeakerList",
+        data: speakerListServerFilter
+      });
     });
     return () => {
       console.log("cleanup");
