@@ -13,7 +13,10 @@ const Speakers = ({}) => {
   const [speakingSunday, setSpeakingSunday] = useState(true);
 
   //const [speakerList, setSpeakerList] = useState([]);
-  const [speakerList, setSpeakerList] = useReducer((state, action) => action, []);
+  function speakersReducer(state, action){
+    return action;
+  }
+  const [speakerList, setSpeakerList] = useReducer(speakersReducer, []);
   const [isLoading, setIsLoading] = useState(true);
 
   const context = useContext(ConfigContext);
