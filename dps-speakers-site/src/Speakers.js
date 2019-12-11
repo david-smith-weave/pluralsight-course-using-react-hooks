@@ -15,6 +15,8 @@ const Speakers = ({}) => {
   const [speakerList, setSpeakerList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const context = useContext(ConfigContext);
+
   useEffect(() => {
     setIsLoading(true);
     new Promise(function(resolve) {
