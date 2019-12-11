@@ -14,7 +14,13 @@ const Speakers = ({}) => {
 
   //const [speakerList, setSpeakerList] = useState([]);
   function speakersReducer(state, action){
-    return action;
+    switch (action.type){
+      case "setSpeakerList": {
+        return action.data;
+      }
+      default:
+        return state;
+    }
   }
   const [speakerList, setSpeakerList] = useReducer(speakersReducer, []);
   const [isLoading, setIsLoading] = useState(true);
