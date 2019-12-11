@@ -12,7 +12,8 @@ const pageToShow = pageName => {
 
 const configValue = {
   showSignMeUp: false,
-  showSpeakerSpeakingDays: true
+  showSpeakerSpeakingDays: true,
+  loggedInUserEmail: 'david.smith@weaveability.com'
 };
 
 const App = ({ pageName }) => {
